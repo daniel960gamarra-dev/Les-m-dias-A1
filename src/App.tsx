@@ -16,6 +16,7 @@ import {
   Volume2,
 } from 'lucide-react';
 import { speakFrench } from './utils/speech';
+import { IMAGES } from './assets';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<NavigationTab>('grammar');
@@ -117,9 +118,12 @@ export default function App() {
             </div>
 
             {/* Right Hero Image Card */}
-            <div className="lg:col-span-5 rounded-xl overflow-hidden border border-slate-200 aspect-16/9 relative shadow-2xs">
+            <div className="lg:col-span-5 rounded-xl overflow-hidden border border-slate-200 aspect-16/9 relative shadow-2xs bg-slate-100">
               <img
-                src="/src/assets/images/hero_press_club_1792611825786.jpg"
+                src={IMAGES.heroPressClub}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = IMAGES.fallback.hero;
+                }}
                 alt="Les collégiens du club journal réunis dans la salle de presse"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"

@@ -13,6 +13,7 @@ import {
   Award,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { IMAGES } from '../assets';
 
 interface PressBadgeBuilderProps {
   onEarnScore: (pts: number) => void;
@@ -30,7 +31,7 @@ export const PressBadgeBuilder: React.FC<PressBadgeBuilderProps> = ({ onEarnScor
     'un appareil photo',
   ]);
   const [selectedAvatar, setSelectedAvatar] = useState<string>(
-    '/src/assets/images/reporter_badge_photo_1792611826526.jpg'
+    IMAGES.reporterBadgePhoto
   );
   const [copied, setCopied] = useState<boolean>(false);
 
@@ -396,6 +397,9 @@ export const PressBadgeBuilder: React.FC<PressBadgeBuilderProps> = ({ onEarnScor
                 <div className="w-24 h-28 rounded-xl border-2 border-slate-800 overflow-hidden shrink-0 bg-slate-100 shadow-xs relative">
                   <img
                     src={selectedAvatar}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = IMAGES.fallback.reporter;
+                    }}
                     alt="Photo du reporter"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"

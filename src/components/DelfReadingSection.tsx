@@ -3,6 +3,7 @@ import { DELF_READING_DATA } from '../data/delfReadingData';
 import { speakFrench } from '../utils/speech';
 import { CheckCircle2, XCircle, Volume2, Award, RotateCcw, HelpCircle, Eye, Newspaper } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { IMAGES } from '../assets';
 
 interface DelfReadingProps {
   onEarnScore: (pts: number) => void;
@@ -108,7 +109,10 @@ export const DelfReadingSection: React.FC<DelfReadingProps> = ({ onEarnScore }) 
           {/* Article Cover Image */}
           <div className="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 aspect-4/3 relative">
             <img
-              src="/src/assets/images/newspaper_article_cover_1792611827195.jpg"
+              src={IMAGES.newspaperArticleCover}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = IMAGES.fallback.newspaper;
+              }}
               alt="Une du journal Le Flash Collège avec les jeunes reporters"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"

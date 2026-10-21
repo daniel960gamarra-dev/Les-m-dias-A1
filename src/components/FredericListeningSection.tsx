@@ -19,6 +19,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { IMAGES } from '../assets';
 
 interface FredericListeningProps {
   onEarnScore: (pts: number) => void;
@@ -149,9 +150,12 @@ export const FredericListeningSection: React.FC<FredericListeningProps> = ({ onE
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left: Illustration */}
-          <div className="lg:col-span-5 rounded-xl overflow-hidden border border-slate-700/80 aspect-16/9 relative shadow-inner">
+          <div className="lg:col-span-5 rounded-xl overflow-hidden border border-slate-700/80 aspect-16/9 relative shadow-inner bg-slate-800">
             <img
-              src="/src/assets/images/frederic_nouvel_an_1792611827152.jpg"
+              src={IMAGES.fredericNouvelAn}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = IMAGES.fallback.frederic;
+              }}
               alt="Frédéric et ses amis fêtant le Nouvel An"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
