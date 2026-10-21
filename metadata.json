@@ -1,0 +1,6 @@
+{
+  "name": "Le Flash FLE - Le Club Presse des 8e",
+  "description": "Plateforme interactive de FLE pour collégiens de 8e : verbes du 1er groupe, être et avoir, univers de la presse, DELF Junior et compréhension orale.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

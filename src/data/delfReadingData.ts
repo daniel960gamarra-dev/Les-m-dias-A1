@@ -1,0 +1,161 @@
+import { DelfArticle } from '../types';
+
+export const DELF_READING_DATA: DelfArticle = {
+  newspaperName: 'LE FLASH COLLÈGE',
+  issueNumber: 'N° 14 - Trimestre 2',
+  date: 'Mardi 14 Novembre',
+  title: 'Dans les coulisses du journal scolaire : immersion avec nos jeunes reporters !',
+  editorialLead: 'Au collège Saint-Louis, le Club Média réunit chaque semaine dix élèves passionnés de 8e année. Micro, carnet et appareil photo en main, ils enquêtent et racontent la vie de l\'établissement. Rencontre exclusive avec l\'équipe de rédaction !',
+  sections: [
+    {
+      heading: 'Une équipe motivée et curieuse',
+      paragraphs: [
+        'Léa et Hugo ont 13 ans. Ils sont élèves en 8e année et ils sont journalistes pour Le Flash Collège. « Nous sommes une équipe soudée », explique Léa avec le sourire. « Chaque mardi midi, nous parlons des sujets importants : le sport au collège, les nouveaux menus de la cantine et les sorties culturelles. »',
+        'Hugo a un rôle précis : il est photographe et caméraman. Il a un appareil photo moderne et un carnet noir. « J\'adore regarder les événements à travers l\'objectif et immortaliser les victoires de notre équipe de basket », confie-t-il.',
+      ],
+    },
+    {
+      heading: 'Comment travaille la rédaction ?',
+      paragraphs: [
+        'Le travail commence toujours par une conférence de rédaction. Les collégiens posent des questions et cherchent des informations vérifiées. Ensuite, ils interviewent les professeurs, les surveillants et leurs camarades.',
+        '« Pour une bonne interview, j\'écoute attentivement les réponses », précise Thomas, 14 ans. « Nous n\'avons pas peur de poser des questions curieuses ! » Après l\'enregistrement audio, les élèves écrivent leurs textes sur ordinateur et publient le journal sur le site internet du collège.',
+      ],
+    },
+    {
+      heading: 'Rejoins le club média !',
+      paragraphs: [
+        'Tu as entre 12 et 14 ans ? Tu es dynamique, curieux et tu aimes écrire ou prendre des photos ? Le club a besoin de nouveaux talents pour la rubrique culture et cinéma. Rendez-vous au CDI le jeudi à 13h00 avec M. Dubois, professeur documentaliste.',
+      ],
+    },
+  ],
+  vocabulary: [
+    {
+      word: 'les coulisses',
+      type: 'nom féminin pluriel',
+      translation: 'behind the scenes',
+      definition: 'Ce qui se passe de manière cachée ou secrète avant le spectacle ou la publication.',
+    },
+    {
+      word: 'la rédaction',
+      type: 'nom féminin',
+      translation: 'the editorial team / newsroom',
+      definition: 'L\'équipe de journalistes qui choisit et écrit les articles d\'un journal.',
+    },
+    {
+      word: 'un scoop',
+      type: 'nom masculin',
+      translation: 'a breaking news scoop',
+      definition: 'Une nouvelle sensationnelle publiée en premier avant tout le monde.',
+    },
+    {
+      word: 'la Une',
+      type: 'nom féminin',
+      translation: 'the front page',
+      definition: 'La première page d\'un journal avec les titres les plus importants.',
+    },
+    {
+      word: 'interviewer',
+      type: 'verbe en -ER',
+      translation: 'to interview',
+      definition: 'Poser des questions à une personne pour enregistrer ou publier ses réponses.',
+    },
+    {
+      word: 'le CDI',
+      type: 'sigle',
+      translation: 'library / media center',
+      definition: 'Centre de Documentation et d\'Information (la bibliothèque du collège).',
+    },
+  ],
+  questions: [
+    {
+      id: 1,
+      type: 'qcm',
+      question: 'Ce document est :',
+      options: [
+        'Une affiche publicitaire pour vendre des appareils photo',
+        'Un article de journal scolaire sur le club média',
+        'Une lettre officielle de la direction du collège',
+      ],
+      correctAnswer: 'Un article de journal scolaire sur le club média',
+      points: 3,
+      explanation: 'Le document présente un titre de journal ("LE FLASH COLLÈGE"), un sous-titre et un article sur les coulisses de la rédaction.',
+      justificationQuote: 'Dans les coulisses du journal scolaire : immersion avec nos jeunes reporters !',
+    },
+    {
+      id: 2,
+      type: 'qcm',
+      question: 'À qui s\'adresse principalement cet article ?',
+      options: [
+        'Aux touristes étrangers en visite dans la ville',
+        'Aux parents des professeurs de musique',
+        'Aux collégiens et élèves de l\'établissement',
+      ],
+      correctAnswer: 'Aux collégiens et élèves de l\'établissement',
+      points: 3,
+      explanation: 'L\'article parle des élèves de 8e et invite les collégiens (« Tu as entre 12 et 14 ans ? Rejoins le club média ! »).',
+      justificationQuote: 'Tu as entre 12 et 14 ans ? Tu es dynamique, curieux... Rejoins le club média !',
+    },
+    {
+      id: 3,
+      type: 'vrai-faux',
+      question: 'VRAI ou FAUX : Léa et Hugo ont 16 ans et sont au lycée.',
+      options: ['VRAI', 'FAUX'],
+      correctAnswer: 'FAUX',
+      points: 4,
+      explanation: 'Léa et Hugo ont 13 ans et sont élèves en 8e année au collège (verbe avoir : « Léa et Hugo ont 13 ans »).',
+      justificationQuote: 'Léa et Hugo ont 13 ans. Ils sont élèves en 8e année.',
+    },
+    {
+      id: 4,
+      type: 'qcm',
+      question: 'Quel est le matériel utilisé par Hugo le photographe ?',
+      options: [
+        'Un appareil photo moderne et un carnet noir',
+        'Un tableau blanc et une guitare électrique',
+        'Un télescope et une calculatrice géante',
+      ],
+      correctAnswer: 'Un appareil photo moderne et un carnet noir',
+      points: 4,
+      explanation: 'Le texte précise qu\'Hugo a un appareil photo et un carnet noir (verbe avoir : « Il a un appareil photo moderne et un carnet noir »).',
+      justificationQuote: 'Il a un appareil photo moderne et un carnet noir.',
+    },
+    {
+      id: 5,
+      type: 'qcm',
+      question: 'Quand se réunissent les élèves du club pour la conférence de rédaction ?',
+      options: [
+        'Le dimanche matin à 6h00',
+        'Chaque mardi midi',
+        'Le samedi soir à minuit',
+      ],
+      correctAnswer: 'Chaque mardi midi',
+      points: 4,
+      explanation: 'Léa indique : « Chaque mardi midi, nous parlons des sujets importants » (verbe parler au 1er groupe).',
+      justificationQuote: 'Chaque mardi midi, nous parlons des sujets importants.',
+    },
+    {
+      id: 6,
+      type: 'vrai-faux',
+      question: 'VRAI ou FAUX : Les jeunes reporters publient leur journal sur le site internet du collège.',
+      options: ['VRAI', 'FAUX'],
+      correctAnswer: 'VRAI',
+      points: 4,
+      explanation: 'Le texte mentionne : « les élèves écrivent leurs textes sur ordinateur et publient le journal sur le site internet du collège » (verbe publier).',
+      justificationQuote: 'les élèves écrivent leurs textes sur ordinateur et publient le journal sur le site internet du collège.',
+    },
+    {
+      id: 7,
+      type: 'qcm',
+      question: 'Pour rejoindre le club média, où et quand les nouveaux élèves doivent-ils se présenter ?',
+      options: [
+        'Au gymnase le lundi à 8h00',
+        'Au CDI le jeudi à 13h00 avec M. Dubois',
+        'À la cantine le vendredi à 19h00',
+      ],
+      correctAnswer: 'Au CDI le jeudi à 13h00 avec M. Dubois',
+      points: 3,
+      explanation: 'La dernière section donne le lieu (CDI) et l\'heure (jeudi à 13h00 avec M. Dubois).',
+      justificationQuote: 'Rendez-vous au CDI le jeudi à 13h00 avec M. Dubois, professeur documentaliste.',
+    },
+  ],
+};
